@@ -230,6 +230,9 @@ while running:
 							score_dict = score_dict_copy
 							english_surface = font.render("Your previous score:", False, (0, 255, 255))
 							previous_score_surface = font.render(score_string, False, (255, 255, 0))
+							kana_display = True
+							english_display = True
+							romaji_display = True
 					if evaluation_word_index < len(words):
 						kana_surface = font.render(word[0], False, (255, 255, 255))
 						kanji_surface = font.render(word[1], False, (255, 255, 0))
