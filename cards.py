@@ -188,7 +188,7 @@ while running:
 				english_display = True if (english_display == False) else False
 				romaji_display = True if (romaji_display == False) else False
 			if keys[pygame.K_RETURN]:
-				if evaluation_mode == True:
+				if evaluation_mode == True and evaluation_word_index + 1 < len(words):
 					kana_display = False
 					english_display = False
 					romaji_display = False
@@ -235,6 +235,9 @@ while running:
 						kanji_surface = font.render(word[1], False, (255, 255, 0))
 						english_surface = font.render(word[2], False, (0, 255, 255))
 						romaji_surface = font.render(word[3], False, (255, 0, 255))
+						if evaluation_mode:
+							if word[1] == "":
+								kana_display = True
 			else:
 				enter_pressed = False
 			if evaluation_mode == False:
