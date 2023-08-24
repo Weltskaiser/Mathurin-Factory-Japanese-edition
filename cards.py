@@ -188,6 +188,10 @@ while running:
 				english_display = True if (english_display == False) else False
 				romaji_display = True if (romaji_display == False) else False
 			if keys[pygame.K_RETURN]:
+				if evaluation_mode == True:
+					kana_display = False
+					english_display = False
+					romaji_display = False
 				if enter_pressed == False and (evaluation_display == True or evaluation_word_index == -1):
 					enter_pressed = True
 					if evaluation_mode == False:
